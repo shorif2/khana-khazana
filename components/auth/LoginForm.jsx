@@ -12,9 +12,10 @@ const LoginForm = () => {
 
   async function onSubmit(event) {
     event.preventDefault();
-    await dbConnect();
+
     try {
       const formData = new FormData(event.currentTarget);
+      await dbConnect();
       const found = await performLogin(formData);
 
       if (found) {

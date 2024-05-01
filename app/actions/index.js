@@ -14,6 +14,7 @@ async function registerUser(formData) {
   redirect("/login");
 }
 async function performLogin(formData) {
+  await dbConnect();
   try {
     const credential = {};
     credential.email = formData.get("email");
