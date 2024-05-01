@@ -1,4 +1,5 @@
 import RecipeCard from "@/components/RecipeCard";
+import { dbConnect } from "@/dbConnect/mongo";
 import { getAllRecipes } from "@/queries/queries";
 
 export async function generateMetadata({ params: { category } }) {
@@ -8,6 +9,7 @@ export async function generateMetadata({ params: { category } }) {
 }
 
 const RecipePage = async ({ params: { category } }) => {
+  await dbConnect();
   const AllRecipes = await getAllRecipes();
   const recipes = AllRecipes.filter(
     (res) => res.category === decodeURIComponent(category)

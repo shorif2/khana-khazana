@@ -1,5 +1,6 @@
 import Banner from "@/components/recipeDetails/Banner";
 import Description from "@/components/recipeDetails/Description";
+import { dbConnect } from "@/dbConnect/mongo";
 import { getRecipeById } from "@/queries/queries";
 
 export async function generateMetadata({ params: { id } }) {
@@ -15,6 +16,7 @@ export async function generateMetadata({ params: { id } }) {
 }
 
 const RecipeDetailsPage = async ({ params: { id } }) => {
+  await dbConnect();
   const recipe = await getRecipeById(id);
 
   return (
