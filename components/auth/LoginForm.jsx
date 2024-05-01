@@ -1,6 +1,7 @@
 "use client";
 import { performLogin } from "@/app/actions";
 import { useAuth } from "@/app/hooks/useAuth";
+import { dbConnect } from "@/dbConnect/mongo";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
@@ -11,6 +12,7 @@ const LoginForm = () => {
 
   async function onSubmit(event) {
     event.preventDefault();
+    await dbConnect();
     try {
       const formData = new FormData(event.currentTarget);
       const found = await performLogin(formData);

@@ -1,4 +1,5 @@
 "use server";
+import { dbConnect } from "@/dbConnect/mongo";
 import {
   createUser,
   findUserByCredentials,
@@ -7,6 +8,7 @@ import {
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 async function registerUser(formData) {
+  await dbConnect();
   const user = Object.fromEntries(formData);
   const created = await createUser(user);
   redirect("/login");
