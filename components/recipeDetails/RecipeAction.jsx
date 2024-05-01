@@ -1,6 +1,7 @@
 "use client";
 import { addToFavourite } from "@/app/actions";
 import { useAuth } from "@/app/hooks/useAuth";
+import { dbConnect } from "@/dbConnect/mongo";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
@@ -10,6 +11,7 @@ const RecipeAction = ({ recipeId }) => {
   const isFavourite = auth?.favourites.find((id) => id === recipeId);
   const [favourite, setFavourite] = useState(isFavourite);
   const toggleInterest = async () => {
+    await dbConnect();
     if (auth) {
       addToFavourite(recipeId, auth?.id);
       setFavourite(!favourite);
