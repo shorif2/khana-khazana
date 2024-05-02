@@ -14,7 +14,13 @@ export async function generateMetadata({ params: { id } }) {
       title: recipeInfo?.name,
       url: "https://khana-kazana.vercel.app",
       siteName: "Khana Khazana",
-      images: [{ url: recipeInfo?.thumbnail, width: 1200, height: 600 }],
+      images: [
+        {
+          url: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd",
+          width: 1200,
+          height: 600,
+        },
+      ],
     },
   };
 }
