@@ -16,7 +16,7 @@ export async function generateMetadata({ params: { id } }) {
       siteName: "Khana Khazana",
       images: [
         {
-          url: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd",
+          url: "https://img.freepik.com/free-photo/woman-beach-with-her-baby-enjoying-sunset_52683-144131.jpg",
           width: 1200,
           height: 600,
         },
