@@ -7,14 +7,16 @@ import AuthProvider from "./providers/AuthProvider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Khana Khazana",
+  title: "Khana Khazana Food",
   description:
     "Choose from thousands of recipes - Appropriately integrate technically sound value with scalable info mediaries negotiate sustainable strategic theme areas",
   openGraph: {
     url: "https://khana-kazana.com",
     siteName: "Khana Khazana",
     images: [
-      "https://img.freepik.com/free-photo/woman-beach-with-her-baby-enjoying-sunset_52683-144131.jpg",
+      {
+        url: "https://img.freepik.com/free-photo/woman-beach-with-her-baby-enjoying-sunset_52683-144131.jpg",
+      },
     ],
   },
 };
