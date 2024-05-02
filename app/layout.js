@@ -8,11 +8,10 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Khana Khazana Food",
-  description:
-    "Choose from thousands of recipes - Appropriately integrate technically sound value with scalable info mediaries negotiate sustainable strategic theme areas",
+  description: "Most Famous food in Bangladesh",
   openGraph: {
     url: "https://khana-kazana.com",
-    siteName: "Khana Khazana",
+    siteName: "Khana Khazana Food",
     images: [
       {
         url: "https://img.freepik.com/free-photo/woman-beach-with-her-baby-enjoying-sunset_52683-144131.jpg",
