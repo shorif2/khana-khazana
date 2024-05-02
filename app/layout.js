@@ -10,6 +10,13 @@ export const metadata = {
   title: "Khana Khazana",
   description:
     "Choose from thousands of recipes - Appropriately integrate technically sound value with scalable info mediaries negotiate sustainable strategic theme areas",
+  openGraph: {
+    url: "https://khana-kazana.com",
+    siteName: "Khana Khazana",
+    images: [
+      "https://img.freepik.com/free-photo/woman-beach-with-her-baby-enjoying-sunset_52683-144131.jpg",
+    ],
+  },
 };
 
 export default async function RootLayout({ children }) {
