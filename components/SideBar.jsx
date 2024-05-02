@@ -12,7 +12,9 @@ const SideBar = async () => {
       <ul className="pl-2 my-6 space-y-4 text-gray-500 text-sm">
         {cat?.map((cat) => (
           <li key={cat}>
-            <Link href={`/category/${cat}`}>{cat}</Link>
+            <Link className="hover:text-red-500" href={`/category/${cat}`}>
+              {cat}
+            </Link>
           </li>
         ))}
       </ul>

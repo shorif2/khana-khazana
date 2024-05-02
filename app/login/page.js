@@ -1,6 +1,8 @@
 import LoginForm from "@/components/auth/LoginForm";
 import Link from "next/link";
-
+export const metadata = {
+  title: "Khana Khazana - Login",
+};
 const LoginPage = () => {
   return (
     <main className="">

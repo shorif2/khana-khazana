@@ -1,6 +1,8 @@
 import RegisterForm from "@/components/auth/RegisterForm";
 import Link from "next/link";
-
+export const metadata = {
+  title: "Khana Khazana - Register",
+};
 const RegisterPage = () => {
   return (
     <main className="">

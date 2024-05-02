@@ -7,11 +7,11 @@ const RecipeCard = ({ recipe }) => {
     .filter((e) => e !== " ")
     .join("");
   return (
-    <Link href={`/recipe/${recipe?.id}`}>
-      <div className="card">
+    <Link className="w-full" href={`/recipe/${recipe?.id}`}>
+      <div className="card w-full">
         <Image
           src={recipe?.thumbnail}
-          className="rounded-md"
+          className="rounded-md hover:scale-[101%]  w-full"
           height={160}
           width={300}
           alt=""
