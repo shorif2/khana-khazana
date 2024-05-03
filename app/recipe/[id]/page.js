@@ -16,7 +16,8 @@ export async function generateMetadata({ params: { id } }) {
       url: "https://khana-kazana.vercel.app",
       siteName: "Khana Khazana",
       images: [
-        "https://img.freepik.com/free-photo/woman-beach-with-her-baby-enjoying-sunset_52683-144131.jpg",
+        recipeInfo?.thumbnail ||
+          "https://img.freepik.com/free-photo/woman-beach-with-her-baby-enjoying-sunset_52683-144131.jpg",
       ],
     },
   };

@@ -11,7 +11,7 @@ const AboutPage = () => {
           The talented people behind the scenes
         </h1>
         <div className="flex flex-row flex-wrap-reverse justify-center mt-8">
-          <div className="flex flex-col justify-center w-full px-8 mx-6 my-12 text-center rounded-md md:w-96 lg:w-80 xl:w-64 dark:bg-gray-100 dark:text-gray-800">
+          <div className="flex flex-col justify-center w-full px-8 mx-6 my-12 text-center rounded-md md:w-96 lg:w-80 xl:w-64 bg-gray-50 dark:text-gray-800 border hover:border-red-500">
             <Image
               alt=""
               className="self-center flex-shrink-0 w-24 h-24 -mt-12 bg-center 
@@ -88,7 +88,7 @@ const AboutPage = () => {
               </a>
             </div>
           </div>
-          <div className="flex flex-col justify-center w-full px-8 mx-6 my-12 text-center rounded-md md:w-96 lg:w-80 xl:w-64 dark:bg-gray-100 dark:text-gray-800">
+          <div className="flex flex-col justify-center w-full px-8 mx-6 my-12 text-center rounded-md md:w-96 lg:w-80 xl:w-64 bg-gray-50 dark:text-gray-800 border hover:border-red-500">
             <Image
               alt=""
               className="self-center flex-shrink-0 w-24 h-24 -mt-12 bg-center 
@@ -165,7 +165,7 @@ const AboutPage = () => {
               </a>
             </div>
           </div>
-          <div className="flex flex-col justify-center w-full px-8 mx-6 my-12 text-center rounded-md md:w-96 lg:w-80 xl:w-64 dark:bg-gray-100 dark:text-gray-800">
+          <div className="flex flex-col justify-center w-full px-8 mx-6 my-12 text-center rounded-md md:w-96 lg:w-80 xl:w-64 bg-gray-50 dark:text-gray-800 border hover:border-red-500">
             <Image
               alt=""
               className="self-center flex-shrink-0 w-24 h-24 -mt-12 bg-center 
@@ -242,7 +242,7 @@ const AboutPage = () => {
               </a>
             </div>
           </div>
-          <div className="flex flex-col justify-center w-full px-8 mx-6 my-12 text-center rounded-md md:w-96 lg:w-80 xl:w-64 dark:bg-gray-100 dark:text-gray-800">
+          <div className="flex flex-col justify-center w-full px-8 mx-6 my-12 text-center rounded-md md:w-96 lg:w-80 xl:w-64 bg-gray-50 dark:text-gray-800 border hover:border-red-500">
             <Image
               alt=""
               className="self-center flex-shrink-0 w-24 h-24 -mt-12 bg-center 
@@ -319,7 +319,7 @@ const AboutPage = () => {
               </a>
             </div>
           </div>
-          <div className="flex flex-col justify-center w-full px-8 mx-6 my-12 text-center rounded-md md:w-96 lg:w-80 xl:w-64 dark:bg-gray-100 dark:text-gray-800">
+          <div className="flex flex-col justify-center w-full px-8 mx-6 my-12 text-center rounded-md md:w-96 lg:w-80 xl:w-64 bg-gray-50 dark:text-gray-800 border hover:border-red-500">
             <Image
               alt=""
               className="self-center flex-shrink-0 w-24 h-24 -mt-12 bg-center 
@@ -396,7 +396,7 @@ const AboutPage = () => {
               </a>
             </div>
           </div>
-          <div className="flex flex-col justify-center w-full px-8 mx-6 my-12 text-center rounded-md md:w-96 lg:w-80 xl:w-64 dark:bg-gray-100 dark:text-gray-800">
+          <div className="flex flex-col justify-center w-full px-8 mx-6 my-12 text-center rounded-md md:w-96 lg:w-80 xl:w-64 bg-gray-50 dark:text-gray-800 border hover:border-red-500">
             <Image
               alt=""
               className="self-center flex-shrink-0 w-24 h-24 -mt-12 bg-center 
