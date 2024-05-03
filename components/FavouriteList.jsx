@@ -1,12 +1,17 @@
 "use client";
 
 import { useAuth } from "@/app/hooks/useAuth";
+import { notFound } from "next/navigation";
 import { useEffect, useState } from "react";
 import RecipeCard from "./RecipeCard";
 
 const FavouriteList = ({ recipes }) => {
   const { auth } = useAuth();
   const [fav, setFav] = useState(null);
+
+  if (!auth) {
+    notFound();
+  }
 
   useEffect(() => {
     const favourite = auth?.favourites.map((id) =>

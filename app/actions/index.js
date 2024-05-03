@@ -5,7 +5,6 @@ import {
   findUserByCredentials,
   updateFavourite,
 } from "@/queries/queries";
-import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import toast from "react-hot-toast";
 
@@ -35,6 +34,5 @@ async function addToFavourite(recipeId, authId) {
   } catch (error) {
     throw error;
   }
-  revalidatePath("/");
 }
 export { addToFavourite, performLogin, registerUser };
