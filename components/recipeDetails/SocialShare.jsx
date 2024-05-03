@@ -14,7 +14,6 @@ import {
 
 const SocialShare = () => {
   const params = usePathname();
-  console.log(params);
 
   const url = `https://khana-kazana.vercel.app${params}`;
   const [show, setShow] = useState(false);

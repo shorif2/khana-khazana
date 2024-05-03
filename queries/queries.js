@@ -1,3 +1,4 @@
+import { dbConnect } from "@/dbConnect/mongo";
 import { recipeModel } from "@/models/recipe-models";
 import { userModel } from "@/models/user-model";
 import {
@@ -11,8 +12,17 @@ async function getAllRecipes() {
 }
 
 async function getRecipeById(recipeId) {
-  const recipe = await recipeModel.findById(recipeId).lean();
-  return replaceMongoIdInObject(recipe);
+  try {
+    const recipe = await recipeModel.findById(recipeId).lean();
+    if (!recipe) {
+      throw new Error("Recipe not found");
+    }
+    return replaceMongoIdInObject(recipe);
+  } catch (error) {
+    return {
+      error: recipeId,
+    };
+  }
 }
 
 async function createUser(user) {
@@ -28,6 +38,7 @@ async function findUserByCredentials(credentials) {
 }
 
 async function updateFavourite(recipeId, authId) {
+  await dbConnect();
   const user = await userModel.findById(authId);
 
   if (user) {

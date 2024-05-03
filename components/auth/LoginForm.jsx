@@ -4,16 +4,20 @@ import { useAuth } from "@/app/hooks/useAuth";
 import { dbConnect } from "@/dbConnect/mongo";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import toast from "react-hot-toast";
+import Spinner from "./Spinner";
 
 const LoginForm = () => {
   const [error, setError] = useState("");
-  const { setAuth } = useAuth();
+  const [loading, setLoading] = useState(false);
+  const { auth, setAuth } = useAuth();
   const router = useRouter();
 
   async function onSubmit(event) {
     event.preventDefault();
 
     try {
+      setLoading(true);
       const formData = new FormData(event.currentTarget);
       await dbConnect();
       const found = await performLogin(formData);
@@ -21,10 +25,15 @@ const LoginForm = () => {
       if (found) {
         setAuth(found);
         router.push("/");
+        setLoading(false);
+        toast.success(`Have a good day, ${found?.firstName} !!`);
+        console.log(auth?.firstName);
       } else {
+        setLoading(false);
         setError("Please provide a valid login credential");
       }
     } catch (err) {
+      setLoading(false);
       setError(err.message);
     }
   }
@@ -45,9 +54,10 @@ const LoginForm = () => {
 
         <button
           type="submit"
-          className="bg-[#eb4a36] py-3 rounded-md text-white w-full mt-4"
+          disabled={loading}
+          className="bg-[#eb4a36]  flex justify-center  gap-2 rounded-md text-white w-full mt-4"
         >
-          Login
+          {loading ? <Spinner /> : <h2 className="py-3">Login</h2>}
         </button>
       </form>
     </>

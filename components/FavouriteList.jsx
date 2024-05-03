@@ -7,6 +7,7 @@ import RecipeCard from "./RecipeCard";
 const FavouriteList = ({ recipes }) => {
   const { auth } = useAuth();
   const [fav, setFav] = useState(null);
+
   useEffect(() => {
     const favourite = auth?.favourites.map((id) =>
       recipes.find((recipe) => recipe.id === id)
@@ -14,6 +15,7 @@ const FavouriteList = ({ recipes }) => {
     setFav(favourite);
   }, [auth?.favourites, recipes]);
   console.log(fav);
+
   return (
     <>
       {auth?.favourites.length == 0 ? (

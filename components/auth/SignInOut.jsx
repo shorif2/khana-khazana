@@ -13,15 +13,20 @@ const SignInOut = () => {
   return (
     <>
       {auth ? (
-        <li className="py-2">
-          <span className=""> {auth?.firstName}</span>
-          <span className="mx-2">|</span>
-          <a className="cursor-pointer" onClick={logout}>
-            Logout
-          </a>
-        </li>
+        <>
+          <li className="py-2 hover:text-red-500">
+            <Link href="/favourite">Favourite</Link>
+          </li>
+          <li className="py-2">
+            <span className="hover:text-red-500"> {auth?.firstName}</span>
+            <span className="mx-2">|</span>
+            <a className="cursor-pointer hover:text-red-500" onClick={logout}>
+              Logout
+            </a>
+          </li>
+        </>
       ) : (
-        <li className="py-2 bg-[#eb4a36] px-6 rounded-md text-white content-center">
+        <li className="py-2 bg-[#eb4a36] hover:bg-red-400 px-6 rounded-md text-white content-center">
           <Link href="/login">Login</Link>
         </li>
       )}

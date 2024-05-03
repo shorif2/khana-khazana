@@ -1,6 +1,7 @@
 import RecipeCard from "@/components/RecipeCard";
 import { dbConnect } from "@/dbConnect/mongo";
 import { getAllRecipes } from "@/queries/queries";
+import { notFound } from "next/navigation";
 
 export async function generateMetadata({ params: { category } }) {
   return {
@@ -11,9 +12,14 @@ export async function generateMetadata({ params: { category } }) {
 const RecipePage = async ({ params: { category } }) => {
   await dbConnect();
   const AllRecipes = await getAllRecipes();
+
   const recipes = AllRecipes.filter(
     (res) => res.category === decodeURIComponent(category)
   );
+
+  if (recipes.length == 0) {
+    notFound();
+  }
   return (
     <main>
       <section className="container py-8">

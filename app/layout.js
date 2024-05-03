@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import { dbConnect } from "@/dbConnect/mongo";
 import { Inter } from "next/font/google";
+import { Toaster } from "react-hot-toast";
 import "./globals.css";
 import AuthProvider from "./providers/AuthProvider";
 
@@ -29,6 +30,7 @@ export default async function RootLayout({ children }) {
           <Navbar />
           {children}
         </AuthProvider>
+        <Toaster />
       </body>
     </html>
   );

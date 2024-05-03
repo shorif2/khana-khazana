@@ -1,5 +1,6 @@
 import Banner from "@/components/recipeDetails/Banner";
 import Description from "@/components/recipeDetails/Description";
+import RecipeNotFound from "@/components/recipeDetails/RecipeNotFound";
 import { dbConnect } from "@/dbConnect/mongo";
 import { getRecipeById } from "@/queries/queries";
 
@@ -27,8 +28,13 @@ const RecipeDetailsPage = async ({ params: { id } }) => {
 
   return (
     <div>
-      <Banner recipe={recipe} />
-      <Description steps={recipe?.steps} />
+      {recipe?.error && <RecipeNotFound message={recipe?.error} />}
+      {recipe?.name && (
+        <>
+          <Banner recipe={recipe} />
+          <Description steps={recipe?.steps} />
+        </>
+      )}
     </div>
   );
 };

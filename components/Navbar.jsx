@@ -16,19 +16,16 @@ const Navbar = () => {
           />
         </Link>
 
-        <ul className="flex gap-4 text-sm text-gray-500">
-          <li className="py-2 active">
+        <ul className="flex gap-4 text-sm text-gray-500 ">
+          <li className="py-2 active hover:text-red-500">
             <Link href="/">Home</Link>
           </li>
 
-          <li className="py-2">
+          <li className="py-2 hover:text-red-500">
             <Link href="/">Recipe</Link>
           </li>
-          <li className="py-2">
-            <Link href="/favourite">Favourite</Link>
-          </li>
 
-          <li className="py-2">
+          <li className="py-2 hover:text-red-500">
             <Link href="/about">About us</Link>
           </li>
 

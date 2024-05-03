@@ -1,25 +1,31 @@
 "use client";
 import { addToFavourite } from "@/app/actions";
 import { useAuth } from "@/app/hooks/useAuth";
-import { dbConnect } from "@/dbConnect/mongo";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { memo, useState } from "react";
+import toast from "react-hot-toast";
 import SocialShare from "./SocialShare";
 
 const RecipeAction = ({ recipeId }) => {
   const { auth } = useAuth();
   const router = useRouter();
-  const isFavourite = auth?.favourites.find((id) => id === recipeId);
+  const isFavourite = !!auth?.favourites.find((id) => id === recipeId);
   const [favourite, setFavourite] = useState(isFavourite);
+
+  console.log("fist", favourite);
+
   const toggleInterest = async () => {
-    await dbConnect();
     if (auth) {
       addToFavourite(recipeId, auth?.id);
       setFavourite(!favourite);
+      toast.success("Favourite Updated");
+      console.log("after click", favourite);
     } else {
       router.push("/login");
+      toast.error("Please Login First");
     }
   };
+  console.log("Last", favourite);
   return (
     <div className="flex gap-4 justify-end">
       <button
@@ -49,4 +55,4 @@ const RecipeAction = ({ recipeId }) => {
   );
 };
 
-export default RecipeAction;
+export default memo(RecipeAction);

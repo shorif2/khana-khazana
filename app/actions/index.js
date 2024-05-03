@@ -7,11 +7,14 @@ import {
 } from "@/queries/queries";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
+import toast from "react-hot-toast";
+
 async function registerUser(formData) {
   await dbConnect();
   const user = Object.fromEntries(formData);
   const created = await createUser(user);
   redirect("/login");
+  toast.success(`Successfully Register!!`);
 }
 async function performLogin(formData) {
   await dbConnect();
