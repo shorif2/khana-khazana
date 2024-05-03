@@ -12,7 +12,6 @@ export async function generateMetadata({ params: { category } }) {
 const RecipePage = async ({ params: { category } }) => {
   await dbConnect();
   const AllRecipes = await getAllRecipes();
-
   const recipes = AllRecipes.filter(
     (res) => res.category === decodeURIComponent(category)
   );

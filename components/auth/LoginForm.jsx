@@ -55,7 +55,7 @@ const LoginForm = () => {
         <button
           type="submit"
           disabled={loading}
-          className="bg-[#eb4a36]  flex justify-center  gap-2 rounded-md text-white w-full mt-4"
+          className="bg-[#eb4a36] hover:bg-red-400  flex justify-center  gap-2 rounded-md text-white w-full mt-4"
         >
           {loading ? <Spinner /> : <h2 className="py-3">Login</h2>}
         </button>

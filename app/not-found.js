@@ -24,7 +24,7 @@ const NotFound = () => {
                   you are looking for not avaible!
                 </p>
 
-                <Link href="/" className="link_404">
+                <Link href="/" className="link_404 hover:bg-red-400">
                   Go to Home
                 </Link>
               </div>

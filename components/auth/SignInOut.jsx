@@ -2,11 +2,13 @@
 import { useAuth } from "@/app/hooks/useAuth";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import toast from "react-hot-toast";
 
 const SignInOut = () => {
   const { auth, setAuth } = useAuth();
   const router = useRouter();
   const logout = () => {
+    toast.success("Successfully Logged Out");
     setAuth(null);
     router.push("/login");
   };

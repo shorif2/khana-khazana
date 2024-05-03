@@ -1,4 +1,4 @@
-const Description = ({ steps }) => {
+const Steps = ({ steps }) => {
   return (
     <section>
       <div className="container py-12">
@@ -16,4 +16,4 @@ const Description = ({ steps }) => {
   );
 };
 
-export default Description;
+export default Steps;
