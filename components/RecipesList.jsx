@@ -24,7 +24,7 @@ const RecipesList = async () => {
           href="/recipe"
           className="py-2 bg-[#eb4a36] hover:bg-red-400 px-6 rounded-md text-white content-center"
         >
-          See More
+          More Recipe
         </Link>
       </div>
     </div>

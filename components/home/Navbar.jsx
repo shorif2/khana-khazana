@@ -9,7 +9,7 @@ const Navbar = () => {
         <Link href="/">
           <Image
             src="/logo.png"
-            alt=""
+            alt="logo"
             className=" h-[40px]"
             width={122}
             height={54}
