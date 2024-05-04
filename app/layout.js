@@ -11,13 +11,10 @@ export const metadata = {
   title: "Khana Khazana",
   description: "Most Famous food in Bangladesh. Thousands of recipes.",
   openGraph: {
+    title: "Khana Khazana",
     url: "https://khana-kazana.vercel.app/",
     siteName: "Khana Khazana",
-    images: [
-      {
-        url: "https://source.unsplash.com/random/800x600?recipe",
-      },
-    ],
+    images: ["https://source.unsplash.com/random/1200x600?recipe"],
   },
 };
 
