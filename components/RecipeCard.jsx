@@ -12,7 +12,7 @@ const RecipeCard = ({ recipe }) => {
       <div className="card w-full relative">
         <RecipeImage recipe={recipe} />
 
-        <h4 className="my-2">{recipe?.name}</h4>
+        <h3 className="my-2">{recipe?.name}</h3>
 
         <div className="py-2 flex justify-between text-xs text-gray-500">
           <span>⭐️ {recipe?.rating}</span>
