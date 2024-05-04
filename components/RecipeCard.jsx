@@ -1,5 +1,5 @@
 import Link from "next/link";
-import RecipeImage from "./RecipeImage";
+import RecipeImage from "./home/RecipeImage";
 
 const RecipeCard = ({ recipe }) => {
   const category = recipe?.name

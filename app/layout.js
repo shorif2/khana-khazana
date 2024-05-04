@@ -1,11 +1,11 @@
-import Navbar from "@/components/Navbar";
+import Navbar from "@/components/home/Navbar";
 import { dbConnect } from "@/dbConnect/mongo";
 import { Inter } from "next/font/google";
 import { Toaster } from "react-hot-toast";
 import "./globals.css";
 import AuthProvider from "./providers/AuthProvider";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], display: "swap" });
 
 export const metadata = {
   title: "Khana Khazana",

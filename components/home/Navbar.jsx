@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import SignInOut from "./auth/SignInOut";
+import SignInOut from "../auth/SignInOut";
 
 const Navbar = () => {
   return (
@@ -22,7 +22,7 @@ const Navbar = () => {
           </li>
 
           <li className="py-2 hover:text-red-500">
-            <Link href="/">Recipe</Link>
+            <Link href="/recipe">Recipe</Link>
           </li>
 
           <li className="py-2 hover:text-red-500">

@@ -1,7 +1,7 @@
-import HeroSection from "@/components/HeroSection";
 import ReactSpinner from "@/components/ReactSpinner";
 import RecipesList from "@/components/RecipesList";
-import SideBar from "@/components/SideBar";
+import HeroSection from "@/components/home/HeroSection";
+import SideBar from "@/components/home/SideBar";
 import { Suspense } from "react";
 
 export default function Home() {

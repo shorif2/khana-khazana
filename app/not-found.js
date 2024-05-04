@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import "../app/404.css";
+import "../cssFile/404.css";
 
 const NotFound = () => {
   const pathname = usePathname();
