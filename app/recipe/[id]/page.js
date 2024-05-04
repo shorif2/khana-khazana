@@ -4,13 +4,14 @@ import Steps from "@/components/recipeDetails/Steps";
 import { dbConnect } from "@/dbConnect/mongo";
 import { getRecipeById } from "@/queries/queries";
 
-export async function generateMetadata({ params: { id } }) {
+export async function generateMetadata({ params: { id } }, parent) {
   await dbConnect();
   const recipeInfo = await getRecipeById(id);
   const imageUrl = recipeInfo?.thumbnail?.slice(0, -8);
   const newUrl = imageUrl + "/1200x600";
 
   return {
+    ...parent,
     title: `Khana Khazana - ${recipeInfo?.name}`,
     description: recipeInfo?.description,
     openGraph: {
