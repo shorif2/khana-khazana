@@ -7,8 +7,8 @@ import { getRecipeById } from "@/queries/queries";
 export async function generateMetadata({ params: { id } }) {
   await dbConnect();
   const recipeInfo = await getRecipeById(id);
-
   const imageUrl = recipeInfo?.thumbnail?.slice(0, -8);
+  const newUrl = imageUrl + "/1200x600";
 
   return {
     title: `Khana Khazana - ${recipeInfo?.name}`,
@@ -18,7 +18,7 @@ export async function generateMetadata({ params: { id } }) {
       url: "https://khana-kazana.vercel.app",
       siteName: "Khana Khazana",
       images: [
-        imageUrl ||
+        newUrl ||
           "https://img.freepik.com/free-photo/woman-beach-with-her-baby-enjoying-sunset_52683-144131.jpg",
       ],
     },
