@@ -1,4 +1,5 @@
 import { getAllRecipes } from "@/queries/queries";
+import Link from "next/link";
 import RecipeCard from "./RecipeCard";
 
 const RecipesList = async () => {
@@ -17,6 +18,14 @@ const RecipesList = async () => {
         {allRecipe?.map((recipe) => (
           <RecipeCard key={recipe.id} recipe={recipe} />
         ))}
+      </div>
+      <div className="flex justify-center items-center">
+        <Link
+          href="/recipe"
+          className="py-2 bg-[#eb4a36] hover:bg-red-400 px-6 rounded-md text-white content-center"
+        >
+          See More
+        </Link>
       </div>
     </div>
   );
